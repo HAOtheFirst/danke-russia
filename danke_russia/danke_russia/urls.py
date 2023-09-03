@@ -15,11 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from products.views import *
+from django.urls import path, include
+from catalog.views import pageNotFound
+
+
 # Маршруты по определенным ссылкам на представление
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', catalog) # (домен + 'products/') - маршрут страницы, products - функция представление этой страницы
-    path('product', )
+    path('', include('catalog.urls'))
 ]
+
+
+handler404 = pageNotFound
