@@ -5,5 +5,6 @@ from .views import *
 
 urlpatterns = [
     path('', catalog, name='home'), # home - имя маршрута по которому можно обращаться к пути
-    path('<slug:product>/', product)
+    path('about/', about, name='about'),
+    path('contacts/', contacts, name='contacts')
     ]

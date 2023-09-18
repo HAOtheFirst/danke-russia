@@ -4,7 +4,13 @@ from django.shortcuts import render
 
 # Функция представление для страницы Products
 def catalog(request): # request - ссылка на HttpRequest
-    return HttpResponse("Главная страница сайта с продуктами") # HttpResponse(х), х - содержимое главное страницы
+    return render(request, 'catalog/catalog.html') # render - шаблонизатор django
+
+def about(request): # request - ссылка на HttpRequest
+    return render(request, 'catalog/about.html')
+
+def contacts(request): # request - ссылка на HttpRequest
+    return render(request, 'catalog/contacts.html')
 
 
 def product(request, product):
