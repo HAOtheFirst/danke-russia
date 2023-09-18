@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <title>{{ title }}</title>
 </head>
 <body>
+{% block main menu %}
+{% endblock %}
 <h1><a href="/about">О нас</a></h1>
 <h1><a href="/">Каталог</a></h1>
 <h1><a href="/contacts/">Контакты</a></h1>
