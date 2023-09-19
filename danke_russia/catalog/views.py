@@ -2,10 +2,13 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
+from .models import *
 # Функция представление для страницы Products
 def catalog(request): # request - ссылка на HttpRequest
-    return render(request, 'catalog/catalog.html', {"title": "Подоконники Danke"}) # render - шаблонизатор django
+    products = Product.objects.all()
+    return render(request, 'catalog/catalog.html', {"title": "Подоконники Danke", "products": products}) # render - шаблонизатор django
 
+menu = ['Каталог', 'О нас', 'Контакты']
 def about(request): # request - ссылка на HttpRequest
     return render(request, 'catalog/about.html')
 

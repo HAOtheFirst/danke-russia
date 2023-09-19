@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная страница</title>
-</head>
-<body>
-<h1><a href="/about">О нас</a></h1>
-<h1><a href="/">Каталог</a></h1>
-<h1><a href="/contacts/">Контакты</a></h1>
-</body>
-</html>
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<a href="http://127.0.0.1:8000/"> about us </a>
+{% endblock %}
